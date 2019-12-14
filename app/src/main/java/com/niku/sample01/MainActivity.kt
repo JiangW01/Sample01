@@ -16,7 +16,9 @@ class MainActivity : AppCompatActivity() {
         btnViewState.setOnClickListener {
             startActivity(Intent(this,StateListDrawableActivity::class.java))
         }
-
+        btnRipple.setOnClickListener {
+            startActivity(Intent(this,RippleDrawableActivity::class.java))
+        }
 
     }
 }

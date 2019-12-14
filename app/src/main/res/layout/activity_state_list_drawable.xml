@@ -9,6 +9,7 @@
 
     <Button
         android:id="@+id/btnPressed"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -20,59 +21,55 @@
         app:layout_constraintTop_toTopOf="parent"></Button>
 
 
-    <LinearLayout
-        android:id="@+id/item1"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnUnenable"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toEndOf="@+id/btnPressed"
-        app:layout_constraintTop_toBottomOf="@+id/btnPressed"
-        >
+        android:layout_marginRight="16dp"
+        android:text="按钮"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@+id/btnPressed"
+        app:layout_constraintRight_toLeftOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/btnPressed"></Button>
 
-        <Button
-            android:id="@+id/btnUnenable"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:text="按钮"></Button>
-
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="enable" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/item2"
-        android:layout_width="match_parent"
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="enable"
+        app:layout_constraintBottom_toBottomOf="@+id/btnUnenable"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnUnenable" />
+
+
+
+    <Button
+        android:id="@+id/btnMuilti"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toEndOf="@+id/btnPressed"
-        app:layout_constraintTop_toBottomOf="@+id/item1"
-        >
+        android:layout_marginRight="16dp"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@+id/btnPressed"
+        app:layout_constraintRight_toLeftOf="@+id/checkBox1"
+        app:layout_constraintTop_toBottomOf="@+id/btnUnenable"
+        android:text="按钮"></Button>
 
-        <Button
-            android:id="@+id/btnMuilti"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:text="按钮"></Button>
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="enable"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMuilti"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnMuilti" />
 
-        <CheckBox
-            android:id="@+id/checkBox1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="enable" />
-    </LinearLayout>
 
     <ImageView
         android:id="@+id/iv_back"
@@ -83,7 +80,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item2"></ImageView>
+        app:layout_constraintTop_toBottomOf="@+id/btnMuilti"></ImageView>
 
 
     <RadioGroup

@@ -6,6 +6,6 @@
     <color name="normalColor">#4498F2</color>
     <color name="pressedColor">#8B9EB3</color>
     <color name="unenableColor">#A8A9AC</color>
-    <color name="fillColor">#138A99</color>
-    <color name="strokeColor">#8DDB90</color>
+    <color name="fillColor">#E60D3E</color>
+    <color name="strokeColor">#5A13D8</color>
 </resources>

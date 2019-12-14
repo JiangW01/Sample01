@@ -281,7 +281,7 @@ inline fun buildDrawable(
  */
 @SuppressLint("WrongConstant")
 inline fun buildDrawable(
-    fillColor: Int,
+    fillColor: Int = Color.TRANSPARENT,
     cornerRadius: Float = -1f,
     strokeWidth: Int = -1,
     strokeColor: Int = Color.TRANSPARENT,
@@ -359,7 +359,7 @@ inline fun buildDrawable(
  * @param strokeColor 边框的颜色
  */
 inline fun buildDrawable(
-    fillColor: Int, strokeWidth: Int = -1, strokeColor: Int = Color.TRANSPARENT,
+    fillColor: Int = Color.TRANSPARENT, strokeWidth: Int = -1, strokeColor: Int = Color.TRANSPARENT,
     leftTopCornerRadius: Float = 0f, leftBottomCornerRadius: Float = 0f,
     rightTopCornerRadius: Float = 0f, rightBottomCornerRadius: Float = 0f
 ): GradientDrawable {

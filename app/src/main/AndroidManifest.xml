@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".StateListDrawableActivity"></activity>
+        <activity android:name=".RippleDrawableActivity"></activity>
         <activity android:name=".ViewShapeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
