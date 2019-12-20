@@ -39,11 +39,8 @@ class RippleDrawableActivity : AppCompatActivity() {
         button6.ripple(rippleColor,sd)
         button6.setTextColor(Color.WHITE)
 
-        val circleDrawable = buildDrawable(Color.parseColor("#1296db"), dpToPx2(100f),gradientType = GradientDrawable.OVAL)
-        val sd1 = buildStateListDrawable()
-            .pressed(circleDrawable)
-            .normal(circleDrawable)
-        circle_ripple.ripple(rippleColor,sd1)
+        val circleDrawable = buildDrawable(Color.parseColor("#1296db"),gradientType = GradientDrawable.OVAL)
+        circle_ripple.ripple(rippleColor,circleDrawable)
 
 
         circle_ripple2.rippleRes(rippleColor,R.drawable.ic_collection)

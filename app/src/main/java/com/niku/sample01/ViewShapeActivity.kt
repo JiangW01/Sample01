@@ -50,11 +50,11 @@ class ViewShapeActivity : AppCompatActivity() {
             leftBottomCornerRadiusX = dpToPx2(10f),leftBottomCornerRadiusY = dpToPx2(20f),
             rightBottomCornerRadiusX = dpToPx2(8f),rightBottomCornerRadiusY = dpToPx2(14f))
 
-        ovelRect.ovel(fillColor, dpToPx2(30f), dpToPx2(30f),strokeWidth = dpToPx(3f),strokeColor = strokeColor)
-        ovelRect1.ovel(getResColor(R.color.fillColor), cornerRadiusX = dpToPx2(50f), cornerRadiusY = dpToPx2(30f),strokeWidth = dpToPx(3f),strokeColor = getResColor(R.color.strokeColor))
+        ovelRect.ovel(fillColor, strokeWidth = dpToPx(3f),strokeColor = strokeColor)
+        ovelRect1.ovel(getResColor(R.color.fillColor),strokeWidth = dpToPx(3f),strokeColor = getResColor(R.color.strokeColor))
 
-        ovelRect2.roundRect(fillColor, dpToPx2(30f))
-        ovelRect3.roundRect(getResColor(R.color.fillColor), dpToPx2(30f),strokeWidth = dpToPx(5f),strokeColor = getResColor(R.color.strokeColor))
+        ovelRect2.ovel(fillColor)
+        ovelRect3.ovel(getResColor(R.color.fillColor),strokeWidth = dpToPx(5f),strokeColor = getResColor(R.color.strokeColor))
         gradient.gradient(gradientColors)
         gradient1.gradient(gradientColors,GradientDrawable.Orientation.LEFT_RIGHT)
         gradient2.gradient(gradientColors,GradientDrawable.Orientation.BL_TR)

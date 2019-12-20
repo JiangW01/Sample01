@@ -125,9 +125,6 @@ fun View?.rect(fillColor: Int, strokeWidth: Int = -1, strokeColor: Int = Color.T
 }
 
 
-
-
-
 /**
  * 给view设置圆角矩形背景
  * @param fillColor 填充颜色
@@ -222,25 +219,10 @@ fun View?.roundRect(
  * @param fillColor 填充颜色
  * @param strokeWidth 边框的宽度
  * @param strokeColor 边框的颜色
- * @param cornerRadiusX 椭圆的半径X
- * @param cornerRadiusY 椭圆的半径Y
  */
-fun View?.ovel(
-    fillColor: Int,
-    cornerRadiusX: Float = 0f,
-    cornerRadiusY: Float = 0f,
-    strokeWidth: Int = -1,
-    strokeColor: Int = Color.TRANSPARENT
-) {
+fun View?.ovel(fillColor: Int, strokeWidth: Int = -1, strokeColor: Int = Color.TRANSPARENT) {
     this?.apply {
-        shapeDrawable(
-            fillColor, strokeWidth, strokeColor,
-            leftTopCornerRadiusX = cornerRadiusX, leftTopCornerRadiusY = cornerRadiusY,
-            rightTopCornerRadiusX = cornerRadiusX, rightTopCornerRadiusY = cornerRadiusY,
-            leftBottomCornerRadiusX = cornerRadiusX, leftBottomCornerRadiusY = cornerRadiusY,
-            rightBottomCornerRadiusX = cornerRadiusX, rightBottomCornerRadiusY = cornerRadiusY,
-            gradientType = GradientDrawable.OVAL
-        )
+        shapeDrawable(fillColor, strokeWidth, strokeColor, gradientType = GradientDrawable.OVAL)
     }
 }
 
@@ -249,9 +231,7 @@ fun View?.ovel(
  * @param colors 渐变的数组颜色（分别为开始颜色，中间夜色，结束颜色）
  * @param orientation 渐变方向
  */
-fun View?.gradient(
-    colors: IntArray,
-    orientation: GradientDrawable.Orientation = GradientDrawable.Orientation.TOP_BOTTOM
+fun View?.gradient(colors: IntArray, orientation: GradientDrawable.Orientation = GradientDrawable.Orientation.TOP_BOTTOM
 ) {
     this?.apply {
         background = buildDrawable(colors, orientation)
@@ -279,7 +259,6 @@ inline fun buildDrawable(
  * @param strokeWidth 边框的宽度
  * @param strokeColor 边框的颜色
  */
-@SuppressLint("WrongConstant")
 inline fun buildDrawable(
     fillColor: Int = Color.TRANSPARENT,
     cornerRadius: Float = -1f,
@@ -295,7 +274,7 @@ inline fun buildDrawable(
     if (cornerRadius > 0) {
         shapeDrawable.cornerRadius = cornerRadius
     }
-    shapeDrawable.gradientType = gradientType
+    shapeDrawable.shape = gradientType
     return shapeDrawable
 }
 
@@ -313,7 +292,6 @@ inline fun buildDrawable(
  * @param rightBottomCornerRadiusX 右下圆角的半径X
  * @param rightBottomCornerRadiusY 右下圆角的半径Y
  */
-@SuppressLint("WrongConstant")
 inline fun buildDrawable(
     fillColor: Int,
     strokeWidth: Int = -1,
@@ -343,7 +321,7 @@ inline fun buildDrawable(
         leftBottomCornerRadiusX,
         leftBottomCornerRadiusY
     )
-    shapeDrawable.gradientType = gradientType
+    shapeDrawable.shape = gradientType
     return shapeDrawable
 }
 
